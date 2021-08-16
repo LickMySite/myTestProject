@@ -29,6 +29,39 @@
 
 		<!-- Javascript -->
 		<script src="app.js"></script>
+
+<style>
+button
+{
+margin: 10px;
+padding: 5px;
+border: 4px solid green;
+}
+
+button:hover
+{
+border: 4px solid red;
+background-color: #774;
+}
+.page
+{
+margin: 5px;
+padding: 5px;
+background-color: black;
+color: white;
+}
+
+.box
+{
+margin: 5px;
+padding: 5px;
+background-color: white;
+color: black;
+height: 200px;
+}
+
+</style>
+
 	</head>
 	<body>
 		<header>
@@ -41,15 +74,21 @@
 			</nav>
 		</header>
 
-			<div>
+<div class="page">			<div>
 				<h1>Hello Git!</h1>
 				<p>This is the start of something <b>BIG!</b></p>
 				<button onClick="thing();">Do Thing</button>
-
+				<div id="new"></div>
 			</div>
-<div id="half"></div>
+
+		<div class="box">
+			<div id="half"></div>
 			<div id="demo"></div>
 
+			<h2>Switch Statement</h2>
+			<div id="switch"></div>
+		</div>
+</div>
 		<footer>
 			<p>Copyright &copy;</p>
 		</footer>
@@ -74,11 +113,27 @@ thing.innerText = i;
 
 console.log(document.getElementById('demo').textContent);
 
+
+switch(i){
+case 1:
+document.getElementById('switch').innerText = "It's just a " + i;
+break;
+case 2:
+document.getElementById('switch').innerText = "It's a thing " + i;
+break;
+case 3:
+document.getElementById('switch').innerText = "OMG it's a  " + i + " !!!";
+break;
+default:
+document.getElementById('switch').innerText = "...more than 3 :(";
+}
+
 i++;
+
 }
 }
 
-switch
+
 
 </script>
 
