@@ -15,7 +15,7 @@
 		<meta name="author" content=" ">
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<!--link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /-->
 
 
 		<!-- Mobile Metas -->
@@ -44,11 +44,43 @@
 			<div>
 				<h1>Hello Git!</h1>
 				<p>This is the start of something <b>BIG!</b></p>
-			<div>
+				<button onClick="thing();">Do Thing</button>
+
+			</div>
+<div id="half"></div>
+			<div id="demo"></div>
 
 		<footer>
-			<p>Copyright Evan Wood</p>
+			<p>Copyright &copy;</p>
 		</footer>
+
+<script>
+var i = 1;
+console.log(document.getElementById('demo').textContent);
+function thing(){
+var thing = document.getElementById('demo');
+if(thing.innerText == 4){
+document.getElementById('half').innerText = "You're half way there :)";
+}
+if(thing.innerText == 5){
+document.getElementById('half').innerText = "";
+}
+
+if(i > 10){
+thing.innerText = "ENOUGH ALREADY!!!";
+
+}else{
+thing.innerText = i;
+
+console.log(document.getElementById('demo').textContent);
+
+i++;
+}
+}
+
+switch
+
+</script>
 
 	</body>
 </html>
